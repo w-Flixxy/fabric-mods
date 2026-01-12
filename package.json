@@ -1,0 +1,7 @@
+{
+  "name": "minecraft-mods-site",
+  "private": true,
+  "scripts": {
+    "build": "node build/generate-mods-json.js"
+  }
+}

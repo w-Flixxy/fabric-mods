@@ -6,5 +6,9 @@
   {
     "name": "ImmediatelyFast-Fabric-1.14.1+1.21.11.jar",
     "url": "mods/ImmediatelyFast-Fabric-1.14.1+1.21.11.jar"
+  },
+  {
+    "name": "Jade-1.21.11-Fabric-21.0.1.jar",
+    "url": "mods/Jade-1.21.11-Fabric-21.0.1.jar"
   }
 ]

@@ -2,5 +2,9 @@
   {
     "name": "BadOptimizations-2.4.1-1.21.11.jar",
     "url": "mods/BadOptimizations-2.4.1-1.21.11.jar"
+  },
+  {
+    "name": "ImmediatelyFast-Fabric-1.14.1+1.21.11.jar",
+    "url": "mods/ImmediatelyFast-Fabric-1.14.1+1.21.11.jar"
   }
 ]

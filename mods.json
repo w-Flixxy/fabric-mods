@@ -70,5 +70,9 @@
   {
     "name": "ferritecore-8.0.3-fabric.jar",
     "url": "mods/ferritecore-8.0.3-fabric.jar"
+  },
+  {
+    "name": "freecam-fabric-1.3.6+mc1.21.11.jar",
+    "url": "mods/freecam-fabric-1.3.6+mc1.21.11.jar"
   }
 ]

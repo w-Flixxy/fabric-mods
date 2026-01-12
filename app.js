@@ -1,14 +1,12 @@
 const list = document.getElementById("mods-list");
 const btnSelected = document.getElementById("download-selected");
 const btnAll = document.getElementById("download-all");
-const btnSelectAll = document.getElementById("select-all"); // NEW
 
 let mods = [];
 let selected = new Set();
-let allSelected = false; // track toggle state
 
 // Load mods.json
-fetch("/mods.json")
+fetch("/mods.json")  // absolute path
   .then(r => r.json())
   .then(data => {
     mods = data;
@@ -25,16 +23,11 @@ function render() {
 
     const cb = document.createElement("input");
     cb.type = "checkbox";
-
     cb.onchange = () => {
       if (cb.checked) selected.add(mod);
       else selected.delete(mod);
       row.classList.toggle("selected", cb.checked);
       btnSelected.disabled = selected.size === 0;
-
-      // Update 'select all' button text
-      allSelected = selected.size === mods.length;
-      btnSelectAll.textContent = allSelected ? "Deselect All" : "Select All";
     };
 
     const name = document.createElement("div");
@@ -42,7 +35,7 @@ function render() {
     name.textContent = mod.name;
 
     const link = document.createElement("a");
-    link.href = "/" + mod.url;
+    link.href = "/" + mod.url;  // absolute path
     link.download = mod.name;
     link.textContent = "Download";
 
@@ -70,8 +63,11 @@ async function zipAndDownload(modList, zipName) {
 
   for (const mod of modList) {
     try {
-      const response = await fetch("/" + mod.url);
-      if (!response.ok) continue;
+      const response = await fetch("/" + mod.url); // absolute path
+      if (!response.ok) {
+        console.error("Failed to fetch", mod.url);
+        continue;
+      }
       const blob = await response.blob();
       zip.file(mod.name, blob);
     } catch (err) {
@@ -82,25 +78,3 @@ async function zipAndDownload(modList, zipName) {
   const content = await zip.generateAsync({ type: "blob" });
   saveAs(content, zipName);
 }
-
-// Select/Deselect all
-btnSelectAll.addEventListener("click", () => {
-  allSelected = !allSelected;
-  selected.clear();
-
-  list.querySelectorAll(".mod-row").forEach(row => {
-    const checkbox = row.querySelector("input[type=checkbox]");
-    checkbox.checked = allSelected;
-    row.classList.toggle("selected", allSelected);
-
-    // Add/remove mods from selected set
-    const modName = row.querySelector(".mod-name").textContent;
-    if (allSelected) {
-      const modObj = mods.find(m => m.name === modName);
-      selected.add(modObj);
-    }
-  });
-
-  btnSelected.disabled = !allSelected;
-  btnSelectAll.textContent = allSelected ? "Deselect All" : "Select All";
-});

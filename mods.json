@@ -46,5 +46,17 @@
   {
     "name": "entity_model_features_1.21.11-fabric-3.0.8.jar",
     "url": "mods/entity_model_features_1.21.11-fabric-3.0.8.jar"
+  },
+  {
+    "name": "entity_texture_features_1.21.11-fabric-7.0.7.jar",
+    "url": "mods/entity_texture_features_1.21.11-fabric-7.0.7.jar"
+  },
+  {
+    "name": "entityculling-fabric-1.9.4-mc1.21.11.jar",
+    "url": "mods/entityculling-fabric-1.9.4-mc1.21.11.jar"
+  },
+  {
+    "name": "fabric-api-0.140.2+1.21.11.jar",
+    "url": "mods/fabric-api-0.140.2+1.21.11.jar"
   }
 ]

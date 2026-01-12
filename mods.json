@@ -66,5 +66,9 @@
   {
     "name": "fast-ip-ping-v1.0.8-mc1.21.11-fabric.jar",
     "url": "mods/fast-ip-ping-v1.0.8-mc1.21.11-fabric.jar"
+  },
+  {
+    "name": "ferritecore-8.0.3-fabric.jar",
+    "url": "mods/ferritecore-8.0.3-fabric.jar"
   }
 ]

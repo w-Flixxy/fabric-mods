@@ -10,5 +10,13 @@
   {
     "name": "Jade-1.21.11-Fabric-21.0.1.jar",
     "url": "mods/Jade-1.21.11-Fabric-21.0.1.jar"
+  },
+  {
+    "name": "MouseTweaks-fabric-mc1.21.11-2.30.jar",
+    "url": "mods/MouseTweaks-fabric-mc1.21.11-2.30.jar"
+  },
+  {
+    "name": "Zoomify-2.14.6+1.21.11.jar",
+    "url": "mods/Zoomify-2.14.6+1.21.11.jar"
   }
 ]

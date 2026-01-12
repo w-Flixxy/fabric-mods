@@ -1,0 +1,89 @@
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --border: #e0e3e8;
+  --text: #1f2933;
+  --accent: #4f46e5;
+  --accent-light: #eef2ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--accent);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mods-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mod-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.mod-row.selected {
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.mod-name {
+  flex: 1;
+  word-break: break-all;
+}
+
+.mod-row a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .mod-row {
+    flex-wrap: wrap;
+  }
+}
